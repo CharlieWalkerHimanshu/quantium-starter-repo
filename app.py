@@ -12,13 +12,17 @@ app = dash.Dash(__name__)
 
 app.layout = html.Div([
 
-    html.H1("Soul Foods Pink Morsel Sales Dashboard", className="header"),
+    html.H1(
+        "Soul Foods Pink Morsel Sales Dashboard",
+        id="header",
+        className="header"
+    ),
 
     html.Div([
         html.Label("Select Region:", className="label"),
 
         dcc.RadioItems(
-            id="region-filter",
+            id="region-picker",
             options=[
                 {"label": "All", "value": "all"},
                 {"label": "North", "value": "north"},
